@@ -29,7 +29,9 @@ export CHIA_KEYS_ROOT="$CHIA_ROOT/keys"
 
 ```sh
 chia init --fix-ssl-permissions
-chia keys add -l farmer -f $CHIA_KEYS_ROOT/farmer.txt
+for k in farmer maker taker; do
+    chia keys add -l $k -f $CHIA_KEYS_ROOT/$k.txt
+done
 
 ```
 
