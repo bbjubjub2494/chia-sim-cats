@@ -111,6 +111,20 @@ CAT2:
 
 ```
 
+### Scenario
+Offer is already in `./offer`.
+Taker takes the offer:
+```sh
+chia wallet take_offer -f 1201765102 offer
+```
+
+See [Notes] to farm the transaction
+
+maker checks their open offers. Expected behavior: 0 offers displayed
+```sh
+chia wallet get_offers -f 1984606926
+```
+
 # Notes
 
 ## config
